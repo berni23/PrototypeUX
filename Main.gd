@@ -6,18 +6,36 @@ var Cpressed = Color(0.090196,0.537255,0.670588,0.2)
 var Cfinished = Color(1,1,1,1)
 var pressed = 0
 var paired = 0
-var Bbefore = null
 var Char=0
+var Screen = 0
+
+func _ready():
+	    
+		for node in get_node('Control2').get_children():node.hide()
+		for node in get_node('Control').get_children():node.hide()
 func Unpress(Node):
 	pressed =0
 	for node in Node.get_children():
-		node.pressed = false	
+		node.pressed = false
 func _on_buttonBack_pressed():
-	for node in get_node('Control').get_children():node.hide()
+	if Screen==0:
+		for node in get_node('Control').get_children():node.hide()
+	else:
+		for node in get_node('Control2').get_children():node.hide()
+		Screen=0
+func _on_ButtonBack17_pressed():
 	for node in get_node('Control2').get_children():node.hide()
+	Screen =0
+	$Sprite.show()
+	$Control/Sprite9.show()
+
+
 func _on_TouchScreenButton_pressed():
 		$Control.show()
-		get_node("Control/Sprite2").show()
+		get_node("Control/Sprite2").show()	
+func _on_ButtonGerman_pressed():
+	   $Control/Sprite9.show()
+
 func _on_Button2_pressed():
 		get_node("Control/Sprite2").hide()
 		get_node("Control/Sprite3").show()
@@ -94,11 +112,9 @@ func right8():
 	$Correct8.play()
 	Unpress($Control/Sprite8)
 func wrong8():
-	print('is wrong')
 	for node in $Control/Sprite8.get_children():
 		if node.pressed==true:
 			 node.modulate = Cwrong
-			 print('sure it is')
 	$Wrong8.play()
 	Unpress($Control/Sprite8)
 func _on_Wrong8_finished():
@@ -126,15 +142,46 @@ func _on_Timer8_timeout():
 	$Control/Sprite8b/Label8b_2.visible_characters=0
 	$Control/Sprite8b/Timer8b.stop()
 	$Keyboard.stop()
-	$Sprite9.show()
-
+	$Control/Sprite9.show()
 func _on_Timer8b_timeout():
 	Char+=1
 	if Char<=33: $Control/Sprite8b/Label8b.visible_characters=Char
 	else: $Control/Sprite8b/Label8b_2.visible_characters=Char-33
 	if Char>68: $Keyboard.stop()
+func _on_Button9_1_pressed():
+	Screen =1
+	$Control2/Sprite17.show()
+	$Control/Sprite9.hide()
+	$Timer17.start()
+	#for node in get_node('Control').get_children():node.hide()
+	$Sprite.hide()
+func _on_Button9_2_pressed():
+	Screen = 1
+	$Control2/Sprite10.show()
+func _on_Button10_pressed():
+	$Control2/Sprite11.show()	
+func _on_Timer17_timeout():
+	#$Control2/Sprite17.hide()
+	$Control2/Sprite18.show()
+	$Timer18.start()
+func _on_Timer18_timeout():
+	$Control2/Sprite19.show()
+func _on_Button19_pressed():
+	$Control2/Sprite20.show()
+func _on_Button9_4_pressed():
+	$Control2/Sprite21.show()
+func _on_Button21_1_pressed():
+	$Control/Sprite9.hide()
+	$Sprite.hide()
+	$Control2/Sprite21.hide()
+	$Control2/Sprite23.show()
+	$Timer23.start()
+func _on_Button21_2_pressed():
+	$Control2/Sprite22.show()
+
+func _on_Timer23_timeout():
+	$Control2/Sprite24.show()
+	$Timer24.start()
 	
-	
-	
-	
-	
+func _on_Timer24_timeout():
+	$Control2/Sprite25.show()
