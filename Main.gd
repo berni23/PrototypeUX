@@ -1,5 +1,4 @@
 extends Node2D
-
 var Cst =Color(1,1,1,0)
 var Cwrong = Color(0.87451, 0.078431,0.078431,0.435294)
 var Cright =Color(0, 0.870588,0.070588, 0.305882)
@@ -8,16 +7,14 @@ var Cfinished = Color(1,1,1,1)
 var pressed = 0
 var paired = 0
 var Bbefore = null
+var Char=0
 func Unpress(Node):
 	pressed =0
 	for node in Node.get_children():
 		node.pressed = false	
 func _on_buttonBack_pressed():
-	for node in get_node('Control').get_children():
-		node.hide()
-	for node in get_node('Control2').get_children():
-		node.hide()
-
+	for node in get_node('Control').get_children():node.hide()
+	for node in get_node('Control2').get_children():node.hide()
 func _on_TouchScreenButton_pressed():
 		$Control.show()
 		get_node("Control/Sprite2").show()
@@ -28,7 +25,7 @@ func _on_Button3_pressed():
 		get_node("Control/Sprite3").hide()
 		if $Control/Sprite3/HSlider.value==0:
 			get_node("Control/Sprite4").show()
-		else: return
+		else: $Sprite9.show()
 func _on_Button4_pressed():
 	get_node("Control/Sprite4").hide()
 	get_node("Control/Sprite5").show()
@@ -119,4 +116,25 @@ func _on_Correct8_finished():
 	if paired>=5:
 		paired =0
 		$Control/Sprite8.hide()
-		$Sprite9.show()
+		$Control/Sprite8b.show()
+		$Timer8.start()
+		$Control/Sprite8b/Timer8b.start()
+		$Keyboard.play()
+func _on_Timer8_timeout():
+	$Control/Sprite8b.hide()
+	$Control/Sprite8b/Label8b.visible_characters=0
+	$Control/Sprite8b/Label8b_2.visible_characters=0
+	$Control/Sprite8b/Timer8b.stop()
+	$Keyboard.stop()
+	$Sprite9.show()
+
+func _on_Timer8b_timeout():
+	Char+=1
+	if Char<=33: $Control/Sprite8b/Label8b.visible_characters=Char
+	else: $Control/Sprite8b/Label8b_2.visible_characters=Char-33
+	if Char>68: $Keyboard.stop()
+	
+	
+	
+	
+	
