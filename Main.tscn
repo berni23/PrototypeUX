@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://frame1.png" type="Texture" id=2]
@@ -27,13 +27,22 @@
 [ext_resource path="res://frame20.png" type="Texture" id=25]
 [ext_resource path="res://frame21.png" type="Texture" id=26]
 [ext_resource path="res://frame22.png" type="Texture" id=27]
-[ext_resource path="res://frame24.png" type="Texture" id=28]
-[ext_resource path="res://frame25.png" type="Texture" id=29]
-[ext_resource path="res://Sounds/keyboard.wav" type="AudioStream" id=30]
+[ext_resource path="res://seriffic.ttf" type="DynamicFontData" id=28]
+[ext_resource path="res://frame24.png" type="Texture" id=29]
+[ext_resource path="res://frame25.png" type="Texture" id=30]
+[ext_resource path="res://Sounds/keyboard.wav" type="AudioStream" id=31]
 
 [sub_resource type="Theme" id=1]
 
 [sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 28 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 47.947, 0 )
@@ -42,7 +51,6 @@ script = ExtResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 466.726, 294.332 )
 rotation = -1.68355
-scale = Vector2( 1, 1 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 
@@ -382,7 +390,23 @@ flat = true
 position = Vector2( -7.62939e-06, 0 )
 stream = ExtResource( 13 )
 
+[node name="Correct22" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+stream = ExtResource( 13 )
+
 [node name="Wrong8" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -30.0714, -2.86395 )
+stream = ExtResource( 14 )
+
+[node name="Correct25" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+stream = ExtResource( 13 )
+
+[node name="Wrong25" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -30.0714, -2.86395 )
+stream = ExtResource( 14 )
+
+[node name="Wrong22" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -30.0714, -2.86395 )
 stream = ExtResource( 14 )
 
@@ -427,11 +451,13 @@ scale = Vector2( 1, 1.04 )
 texture = ExtResource( 19 )
 
 [node name="Sprite15" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 420.901, 293.552 )
 scale = Vector2( 1, 1.04 )
 texture = ExtResource( 20 )
 
 [node name="Sprite16" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 423.06, 291.393 )
 scale = Vector2( 1, 1.01009 )
 texture = ExtResource( 21 )
@@ -473,6 +499,7 @@ scale = Vector2( 1.10504, 1.127 )
 texture = ExtResource( 25 )
 
 [node name="Sprite21" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 422.587, 292.961 )
 rotation = -0.00286697
 scale = Vector2( 1.01618, 1.01802 )
@@ -495,11 +522,20 @@ rect_scale = Vector2( 9.59023, 3.03556 )
 flat = true
 
 [node name="Sprite22" type="Sprite" parent="Control2"]
-visible = false
 position = Vector2( 421.654, 288.006 )
 rotation = -0.00286697
 scale = Vector2( 1.01514, 1.02327 )
 texture = ExtResource( 27 )
+
+[node name="TextEdit" type="TextEdit" parent="Control2/Sprite22"]
+margin_left = -133.0
+margin_top = 86.0
+margin_right = 104.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
+custom_colors/code_folding_color = Color( 1, 1, 1, 1 )
+custom_colors/completion_font_color = Color( 0, 0, 0, 1 )
 
 [node name="Sprite23" type="Sprite" parent="Control2"]
 visible = false
@@ -509,23 +545,34 @@ scale = Vector2( 1.01514, 0.982815 )
 texture = ExtResource( 22 )
 
 [node name="Sprite24" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 113.47, 511.342 )
 rotation = 0.000206006
 scale = Vector2( 1.13514, 1.18283 )
-texture = ExtResource( 28 )
+texture = ExtResource( 29 )
 
 [node name="Sprite25" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 437.548, 301.441 )
 rotation = 0.000206006
 scale = Vector2( 0.981538, 1.06257 )
-texture = ExtResource( 29 )
+texture = ExtResource( 30 )
+
+[node name="TextEdit" type="TextEdit" parent="Control2/Sprite25"]
+margin_left = -253.0
+margin_top = 40.0
+margin_right = -49.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
+custom_colors/code_folding_color = Color( 1, 1, 1, 1 )
 
 [node name="Timer8" type="Timer" parent="."]
 wait_time = 8.0
 one_shot = true
 
 [node name="Keyboard" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 30 )
+stream = ExtResource( 31 )
 
 [node name="Timer17" type="Timer" parent="."]
 wait_time = 2.0
@@ -567,7 +614,11 @@ one_shot = true
 [connection signal="pressed" from="Control/Sprite9/Button9_2" to="." method="_on_Button9_2_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_4" to="." method="_on_Button9_4_pressed"]
 [connection signal="finished" from="Correct8" to="." method="_on_Correct8_finished"]
+[connection signal="finished" from="Correct22" to="." method="_on_Correct8_finished"]
 [connection signal="finished" from="Wrong8" to="." method="_on_Wrong8_finished"]
+[connection signal="finished" from="Correct25" to="." method="_on_Correct25_finished"]
+[connection signal="finished" from="Wrong25" to="." method="_on_Wrong8_finished"]
+[connection signal="finished" from="Wrong22" to="." method="_on_Wrong8_finished"]
 [connection signal="pressed" from="Control2/Sprite10/Button10" to="." method="_on_Button10_pressed"]
 [connection signal="pressed" from="Control2/Sprite19/Button19" to="." method="_on_Button19_pressed"]
 [connection signal="pressed" from="Control2/Sprite21/Button21_1" to="." method="_on_Button21_1_pressed"]
