@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://frame1.png" type="Texture" id=2]
@@ -12,25 +12,26 @@
 [ext_resource path="res://buttonTexture2.png" type="Texture" id=10]
 [ext_resource path="res://betweenScreen.png" type="Texture" id=11]
 [ext_resource path="res://frame9.png" type="Texture" id=12]
-[ext_resource path="res://Sounds/correct.wav" type="AudioStream" id=13]
-[ext_resource path="res://Sounds/wrong.wav" type="AudioStream" id=14]
-[ext_resource path="res://frame10.png" type="Texture" id=15]
-[ext_resource path="res://frame11.png" type="Texture" id=16]
-[ext_resource path="res://frame12.png" type="Texture" id=17]
-[ext_resource path="res://frame13.png" type="Texture" id=18]
-[ext_resource path="res://frame14.png" type="Texture" id=19]
-[ext_resource path="res://frame15.png" type="Texture" id=20]
-[ext_resource path="res://frame16.png" type="Texture" id=21]
-[ext_resource path="res://frame17.png" type="Texture" id=22]
-[ext_resource path="res://frame18.png" type="Texture" id=23]
-[ext_resource path="res://frame19.png" type="Texture" id=24]
-[ext_resource path="res://frame20.png" type="Texture" id=25]
-[ext_resource path="res://frame21.png" type="Texture" id=26]
-[ext_resource path="res://frame22.png" type="Texture" id=27]
-[ext_resource path="res://seriffic.ttf" type="DynamicFontData" id=28]
-[ext_resource path="res://frame24.png" type="Texture" id=29]
-[ext_resource path="res://frame25.png" type="Texture" id=30]
-[ext_resource path="res://Sounds/keyboard.wav" type="AudioStream" id=31]
+[ext_resource path="res://frame10.png" type="Texture" id=13]
+[ext_resource path="res://frame11.png" type="Texture" id=14]
+[ext_resource path="res://frame_tandem.png" type="Texture" id=15]
+[ext_resource path="res://frame12.png" type="Texture" id=16]
+[ext_resource path="res://frame13.png" type="Texture" id=17]
+[ext_resource path="res://frame14.png" type="Texture" id=18]
+[ext_resource path="res://frame15.png" type="Texture" id=19]
+[ext_resource path="res://frame16.png" type="Texture" id=20]
+[ext_resource path="res://frame17.png" type="Texture" id=21]
+[ext_resource path="res://frame18.png" type="Texture" id=22]
+[ext_resource path="res://frame19.png" type="Texture" id=23]
+[ext_resource path="res://frame20.png" type="Texture" id=24]
+[ext_resource path="res://frame21.png" type="Texture" id=25]
+[ext_resource path="res://frame22.png" type="Texture" id=26]
+[ext_resource path="res://seriffic.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://frame24.png" type="Texture" id=28]
+[ext_resource path="res://frame25.png" type="Texture" id=29]
+[ext_resource path="res://Sounds/correct.wav" type="AudioStream" id=30]
+[ext_resource path="res://Sounds/wrong.wav" type="AudioStream" id=31]
+[ext_resource path="res://Sounds/keyboard.wav" type="AudioStream" id=32]
 
 [sub_resource type="Theme" id=1]
 
@@ -38,11 +39,11 @@
 
 [sub_resource type="DynamicFont" id=3]
 size = 20
-font_data = ExtResource( 28 )
+font_data = ExtResource( 27 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 20
-font_data = ExtResource( 28 )
+font_data = ExtResource( 27 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 47.947, 0 )
@@ -76,6 +77,7 @@ rect_scale = Vector2( 2.42889, 1.36345 )
 flat = true
 
 [node name="Sprite" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 420.672, 269.397 )
 scale = Vector2( 1, 0.982575 )
 texture = ExtResource( 2 )
@@ -98,6 +100,7 @@ rect_scale = Vector2( 14.003, 2.07181 )
 flat = true
 
 [node name="Control" type="Control" parent="."]
+editor/display_folded = true
 margin_left = -3.09094
 margin_right = 36.9091
 margin_bottom = 40.0
@@ -383,30 +386,6 @@ margin_right = -31.0969
 margin_bottom = 180.816
 flat = true
 
-[node name="Correct8" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -7.62939e-06, 0 )
-stream = ExtResource( 13 )
-
-[node name="Correct22" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -7.62939e-06, 0 )
-stream = ExtResource( 13 )
-
-[node name="Wrong8" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -30.0714, -2.86395 )
-stream = ExtResource( 14 )
-
-[node name="Correct25" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -7.62939e-06, 0 )
-stream = ExtResource( 13 )
-
-[node name="Wrong25" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -30.0714, -2.86395 )
-stream = ExtResource( 14 )
-
-[node name="Wrong22" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( -30.0714, -2.86395 )
-stream = ExtResource( 14 )
-
 [node name="Control2" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -415,7 +394,7 @@ margin_bottom = 40.0
 editor/display_folded = true
 visible = false
 position = Vector2( 425.119, 284.631 )
-texture = ExtResource( 15 )
+texture = ExtResource( 13 )
 
 [node name="Button10" type="Button" parent="Control2/Sprite10"]
 margin_left = -6.10352e-05
@@ -426,50 +405,89 @@ rect_scale = Vector2( 6.31178, 3.12737 )
 flat = true
 
 [node name="Sprite11" type="Sprite" parent="Control2"]
-visible = false
 position = Vector2( 423.871, 284.088 )
-texture = ExtResource( 16 )
+texture = ExtResource( 14 )
+
+[node name="Sprite12A" type="Sprite" parent="Control2"]
+editor/display_folded = true
+position = Vector2( 422.948, 284.886 )
+texture = ExtResource( 15 )
+
+[node name="Button12A1" type="Button" parent="Control2/Sprite12A"]
+margin_left = -149.513
+margin_top = -210.487
+margin_right = -53.5134
+margin_bottom = -188.487
+flat = true
+
+[node name="Button12A2" type="Button" parent="Control2/Sprite12A"]
+margin_left = -50.0
+margin_top = -210.073
+margin_right = 46.0
+margin_bottom = -188.073
+flat = true
+
+[node name="Button12A3" type="Button" parent="Control2/Sprite12A"]
+margin_left = 49.0
+margin_top = -211.0
+margin_right = 148.0
+margin_bottom = -189.0
+flat = true
 
 [node name="Sprite12" type="Sprite" parent="Control2"]
-visible = false
 position = Vector2( 423.102, 282.285 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
+
+[node name="Button12" type="Button" parent="Control2/Sprite12"]
+margin_left = -153.0
+margin_top = -122.0
+margin_right = 55.0
+margin_bottom = -75.0
+flat = true
 
 [node name="Sprite13" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 420.931, 300 )
 scale = Vector2( 0.98, 0.97 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="Sprite14" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 420.901, 295.71 )
 scale = Vector2( 1, 1.04 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 
 [node name="Sprite15" type="Sprite" parent="Control2"]
+editor/display_folded = true
 visible = false
 position = Vector2( 420.901, 293.552 )
 scale = Vector2( 1, 1.04 )
-texture = ExtResource( 20 )
+texture = ExtResource( 19 )
+
+[node name="Button15" type="Button" parent="Control2/Sprite15"]
+margin_left = -57.0
+margin_top = 103.0
+margin_right = 67.0
+margin_bottom = 146.0
+flat = true
 
 [node name="Sprite16" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 423.06, 291.393 )
 scale = Vector2( 1, 1.01009 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Sprite17" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 427.377, 297.869 )
 rotation = 1.56971
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="Sprite18" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 203.652, 277.039 )
 scale = Vector2( 1, 1.01009 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="Sprite19" type="Sprite" parent="Control2"]
 editor/display_folded = true
@@ -477,7 +495,7 @@ visible = false
 position = Vector2( 430, 299.76 )
 rotation = -1.56205
 scale = Vector2( 1.14, 1.09 )
-texture = ExtResource( 24 )
+texture = ExtResource( 23 )
 
 [node name="Button19" type="Button" parent="Control2/Sprite19"]
 margin_left = -52.8811
@@ -493,14 +511,15 @@ visible = false
 position = Vector2( 437.29, 293.822 )
 rotation = -0.00286697
 scale = Vector2( 1.10504, 1.127 )
-texture = ExtResource( 25 )
+texture = ExtResource( 24 )
 
 [node name="Sprite21" type="Sprite" parent="Control2"]
+editor/display_folded = true
 visible = false
 position = Vector2( 422.587, 292.961 )
 rotation = -0.00286697
 scale = Vector2( 1.01618, 1.01802 )
-texture = ExtResource( 26 )
+texture = ExtResource( 25 )
 
 [node name="Button21_1" type="Button" parent="Control2/Sprite21"]
 margin_left = -111.245
@@ -519,11 +538,12 @@ rect_scale = Vector2( 9.59023, 3.03556 )
 flat = true
 
 [node name="Sprite22" type="Sprite" parent="Control2"]
+editor/display_folded = true
 visible = false
 position = Vector2( 421.654, 288.006 )
 rotation = -0.00286697
 scale = Vector2( 1.01514, 1.02327 )
-texture = ExtResource( 27 )
+texture = ExtResource( 26 )
 
 [node name="TextEdit" type="TextEdit" parent="Control2/Sprite22"]
 margin_left = -133.0
@@ -540,21 +560,22 @@ visible = false
 position = Vector2( 428.739, 301.163 )
 rotation = 1.56605
 scale = Vector2( 1.01514, 0.982815 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="Sprite24" type="Sprite" parent="Control2"]
 visible = false
 position = Vector2( 113.47, 511.342 )
 rotation = 0.000206006
 scale = Vector2( 1.13514, 1.18283 )
-texture = ExtResource( 29 )
+texture = ExtResource( 28 )
 
 [node name="Sprite25" type="Sprite" parent="Control2"]
+editor/display_folded = true
 visible = false
 position = Vector2( 437.548, 301.441 )
 rotation = 0.000206006
 scale = Vector2( 0.981538, 1.06257 )
-texture = ExtResource( 30 )
+texture = ExtResource( 29 )
 
 [node name="TextEdit" type="TextEdit" parent="Control2/Sprite25"]
 margin_left = -253.0
@@ -565,12 +586,36 @@ custom_fonts/font = SubResource( 4 )
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
 custom_colors/code_folding_color = Color( 1, 1, 1, 1 )
 
+[node name="Correct8" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+stream = ExtResource( 30 )
+
+[node name="Correct22" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+stream = ExtResource( 30 )
+
+[node name="Wrong8" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -30.0714, -2.86395 )
+stream = ExtResource( 31 )
+
+[node name="Correct25" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+stream = ExtResource( 30 )
+
+[node name="Wrong25" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -30.0714, -2.86395 )
+stream = ExtResource( 31 )
+
+[node name="Wrong22" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -30.0714, -2.86395 )
+stream = ExtResource( 31 )
+
+[node name="Keyboard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 32 )
+
 [node name="Timer8" type="Timer" parent="."]
 wait_time = 8.0
 one_shot = true
-
-[node name="Keyboard" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 31 )
 
 [node name="Timer17" type="Timer" parent="."]
 wait_time = 2.0
@@ -586,6 +631,9 @@ one_shot = true
 
 [node name="Timer24" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
+
+[node name="Timer14" type="Timer" parent="."]
 one_shot = true
 [connection signal="timeout" from="Timer8b" to="." method="_on_Timer8b_timeout"]
 [connection signal="pressed" from="ButtonBack17" to="." method="_on_ButtonBack17_pressed"]
@@ -612,18 +660,24 @@ one_shot = true
 [connection signal="pressed" from="Control/Sprite9/Button9_2" to="." method="_on_Button9_2_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_3" to="." method="_on_Button9_3_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_4" to="." method="_on_Button9_4_pressed"]
+[connection signal="pressed" from="Control2/Sprite10/Button10" to="." method="_on_Button10_pressed"]
+[connection signal="pressed" from="Control2/Sprite12A/Button12A1" to="." method="_on_Button12A1_pressed"]
+[connection signal="pressed" from="Control2/Sprite12A/Button12A2" to="." method="_on_Button12A2_pressed"]
+[connection signal="pressed" from="Control2/Sprite12A/Button12A3" to="." method="_on_Button12A3_pressed"]
+[connection signal="pressed" from="Control2/Sprite12/Button12" to="." method="_on_Button12_pressed"]
+[connection signal="pressed" from="Control2/Sprite15/Button15" to="." method="_on_Button15_pressed"]
+[connection signal="pressed" from="Control2/Sprite19/Button19" to="." method="_on_Button19_pressed"]
+[connection signal="pressed" from="Control2/Sprite21/Button21_1" to="." method="_on_Button21_1_pressed"]
+[connection signal="pressed" from="Control2/Sprite21/Button21_2" to="." method="_on_Button21_2_pressed"]
 [connection signal="finished" from="Correct8" to="." method="_on_Correct8_finished"]
 [connection signal="finished" from="Correct22" to="." method="_on_Correct8_finished"]
 [connection signal="finished" from="Wrong8" to="." method="_on_Wrong8_finished"]
 [connection signal="finished" from="Correct25" to="." method="_on_Correct25_finished"]
 [connection signal="finished" from="Wrong25" to="." method="_on_Wrong8_finished"]
 [connection signal="finished" from="Wrong22" to="." method="_on_Wrong8_finished"]
-[connection signal="pressed" from="Control2/Sprite10/Button10" to="." method="_on_Button10_pressed"]
-[connection signal="pressed" from="Control2/Sprite19/Button19" to="." method="_on_Button19_pressed"]
-[connection signal="pressed" from="Control2/Sprite21/Button21_1" to="." method="_on_Button21_1_pressed"]
-[connection signal="pressed" from="Control2/Sprite21/Button21_2" to="." method="_on_Button21_2_pressed"]
 [connection signal="timeout" from="Timer8" to="." method="_on_Timer8_timeout"]
 [connection signal="timeout" from="Timer17" to="." method="_on_Timer17_timeout"]
 [connection signal="timeout" from="Timer18" to="." method="_on_Timer18_timeout"]
 [connection signal="timeout" from="Timer23" to="." method="_on_Timer23_timeout"]
 [connection signal="timeout" from="Timer24" to="." method="_on_Timer24_timeout"]
+[connection signal="timeout" from="Timer14" to="." method="_on_Timer14_timeout"]

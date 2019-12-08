@@ -9,9 +9,10 @@ var paired = 0
 var Char=0
 var Screen = 0
 var message = 'Hey'
-
+var a=1
 func _ready():
 	    		
+				
 			for node in get_node('Control').get_children():node.hide()
 			for node in get_node('Control2').get_children():node.hide()
 
@@ -183,14 +184,11 @@ func _on_Button21_1_pressed():
 	$Timer23.start()
 func _on_Button21_2_pressed():
 	$Control2/Sprite22.show()
-
 func _on_Timer23_timeout():
 	$Control2/Sprite24.show()
 	$Timer24.start()
-
 func _on_Timer24_timeout():
 	$Control2/Sprite25.show()
-
 func _input(event):
 	if $Control2/Sprite25.is_visible():
 		if Input.is_key_pressed(KEY_ENTER):
@@ -209,9 +207,19 @@ func _input(event):
 			else:
 				$Wrong22.play()
 				$Control2/Sprite22/TextEdit.text=''
-				
 
 func _on_Button9_3_pressed():
 	Screen =1
+	$Control2/Sprite12A.show()
+func _on_Button12A1_pressed():
 	$Control2/Sprite12.show()
-	
+func _on_Button12A2_pressed():
+	$Control2/Sprite14.show()
+	$Timer14.start()
+func _on_Button12_pressed():
+	$Control2/Sprite13.show()
+func _on_Timer14_timeout():
+	$Control2/Sprite15.show()
+func _on_Button15_pressed():
+	$Control2/Sprite16.show()
+
