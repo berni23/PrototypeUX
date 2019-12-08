@@ -36,11 +36,11 @@
 
 [sub_resource type="CanvasItemMaterial" id=2]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 font_data = ExtResource( 28 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = ExtResource( 28 )
 
@@ -320,7 +320,6 @@ icon = ExtResource( 10 )
 flat = true
 
 [node name="Sprite8b" type="Sprite" parent="Control"]
-editor/display_folded = true
 visible = false
 position = Vector2( 426.532, 280.508 )
 scale = Vector2( 1.9745, 1.84664 )
@@ -352,8 +351,6 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Sprite9" type="Sprite" parent="Control"]
-editor/display_folded = true
-visible = false
 position = Vector2( 426.287, 283.547 )
 scale = Vector2( 0.999094, 0.988974 )
 texture = ExtResource( 12 )
@@ -522,6 +519,7 @@ rect_scale = Vector2( 9.59023, 3.03556 )
 flat = true
 
 [node name="Sprite22" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 421.654, 288.006 )
 rotation = -0.00286697
 scale = Vector2( 1.01514, 1.02327 )
@@ -532,7 +530,7 @@ margin_left = -133.0
 margin_top = 86.0
 margin_right = 104.0
 margin_bottom = 123.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
 custom_colors/code_folding_color = Color( 1, 1, 1, 1 )
 custom_colors/completion_font_color = Color( 0, 0, 0, 1 )
@@ -563,7 +561,7 @@ margin_left = -253.0
 margin_top = 40.0
 margin_right = -49.0
 margin_bottom = 65.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/member_variable_color = Color( 1, 1, 1, 1 )
 custom_colors/code_folding_color = Color( 1, 1, 1, 1 )
 
@@ -612,6 +610,7 @@ one_shot = true
 [connection signal="pressed" from="Control/Sprite8/Button8_10" to="." method="_on_Button8_10_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_1" to="." method="_on_Button9_1_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_2" to="." method="_on_Button9_2_pressed"]
+[connection signal="pressed" from="Control/Sprite9/Button9_3" to="." method="_on_Button9_3_pressed"]
 [connection signal="pressed" from="Control/Sprite9/Button9_4" to="." method="_on_Button9_4_pressed"]
 [connection signal="finished" from="Correct8" to="." method="_on_Correct8_finished"]
 [connection signal="finished" from="Correct22" to="." method="_on_Correct8_finished"]

@@ -9,20 +9,24 @@ var paired = 0
 var Char=0
 var Screen = 0
 var message = 'Hey'
+
 func _ready():
-	    
-		for node in get_node('Control2').get_children():node.hide()
-		for node in get_node('Control').get_children():node.hide()
+	    		
+			for node in get_node('Control').get_children():node.hide()
+			for node in get_node('Control2').get_children():node.hide()
+
 func Unpress(Node):
 	pressed =0
 	for node in Node.get_children():
 		node.pressed = false
 func _on_buttonBack_pressed():
+	
 	if Screen==0:
-		for node in get_node('Control').get_children():node.hide()
-	else:
+		for node in get_node('Control').get_children():node.hide()	
+	else: 
 		for node in get_node('Control2').get_children():node.hide()
 		Screen=0
+		
 func _on_ButtonBack17_pressed():
 	for node in get_node('Control2').get_children():node.hide()
 	Screen =0
@@ -134,13 +138,13 @@ func _on_Correct8_finished():
 		$Control/Sprite8.hide()
 		$Control/Sprite8b.show()
 		$Timer8.start()
-		$Control/Sprite8b/Timer8b.start()
+		$Timer8b.start()
 		$Keyboard.play()
 func _on_Timer8_timeout():
 	$Control/Sprite8b.hide()
 	$Control/Sprite8b/Label8b.visible_characters=0
 	$Control/Sprite8b/Label8b_2.visible_characters=0
-	$Control/Sprite8b/Timer8b.stop()
+	$Timer8b.stop()
 	$Keyboard.stop()
 	$Control/Sprite9.show()
 func _on_Timer8b_timeout():
@@ -169,6 +173,7 @@ func _on_Timer18_timeout():
 func _on_Button19_pressed():
 	$Control2/Sprite20.show()
 func _on_Button9_4_pressed():
+	Screen=1
 	$Control2/Sprite21.show()
 func _on_Button21_1_pressed():
 	$Control/Sprite9.hide()
@@ -189,8 +194,8 @@ func _on_Timer24_timeout():
 func _input(event):
 	if $Control2/Sprite25.is_visible():
 		if Input.is_key_pressed(KEY_ENTER):
-			if $Control2/Sprite25/TextEdit.text=='Uhr':
-				$Control2/Sprite25/Label.modulate=Cright
+			if $Control2/Sprite25/TextEdit.text=='Die Uhr':
+				$Control2/Sprite25/TextEdit.modulate=Cright
 				$Correct25.play()
 			else:
 				$Wrong25.play()
@@ -198,10 +203,15 @@ func _input(event):
 		
 	elif $Control2/Sprite22.is_visible():
 		if Input.is_key_pressed(KEY_ENTER):
-			if $Control2/Sprite22/TextEdit.text=='Auto':
+			if $Control2/Sprite22/TextEdit.text=='Das Auto':
 				$Control2/Sprite22/TextEdit.modulate=Cright
 				$Correct22.play()
 			else:
 				$Wrong22.play()
 				$Control2/Sprite22/TextEdit.text=''
 				
+
+func _on_Button9_3_pressed():
+	Screen =1
+	$Control2/Sprite12.show()
+	
