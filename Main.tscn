@@ -323,12 +323,14 @@ icon = ExtResource( 10 )
 flat = true
 
 [node name="Sprite8b" type="Sprite" parent="Control"]
+editor/display_folded = true
 visible = false
 position = Vector2( 426.532, 280.508 )
 scale = Vector2( 1.9745, 1.84664 )
 texture = ExtResource( 11 )
 
 [node name="Label8b" type="Label" parent="Control/Sprite8b"]
+visible = false
 margin_left = -70.073
 margin_top = -54.1456
 margin_right = 356.927
@@ -341,6 +343,7 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Label8b_2" type="Label" parent="Control/Sprite8b"]
+visible = false
 margin_left = -73.2002
 margin_top = -10.7115
 margin_right = 353.8
@@ -354,6 +357,7 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Sprite9" type="Sprite" parent="Control"]
+visible = false
 position = Vector2( 426.287, 283.547 )
 scale = Vector2( 0.999094, 0.988974 )
 texture = ExtResource( 12 )
@@ -387,6 +391,7 @@ margin_bottom = 180.816
 flat = true
 
 [node name="Control2" type="Control" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -405,11 +410,13 @@ rect_scale = Vector2( 6.31178, 3.12737 )
 flat = true
 
 [node name="Sprite11" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 423.871, 284.088 )
 texture = ExtResource( 14 )
 
 [node name="Sprite12A" type="Sprite" parent="Control2"]
 editor/display_folded = true
+visible = false
 position = Vector2( 422.948, 284.886 )
 texture = ExtResource( 15 )
 
@@ -435,6 +442,7 @@ margin_bottom = -189.0
 flat = true
 
 [node name="Sprite12" type="Sprite" parent="Control2"]
+visible = false
 position = Vector2( 423.102, 282.285 )
 texture = ExtResource( 16 )
 
@@ -460,8 +468,7 @@ texture = ExtResource( 18 )
 [node name="Sprite15" type="Sprite" parent="Control2"]
 editor/display_folded = true
 visible = false
-position = Vector2( 420.901, 293.552 )
-scale = Vector2( 1, 1.04 )
+position = Vector2( 418.509, 283.985 )
 texture = ExtResource( 19 )
 
 [node name="Button15" type="Button" parent="Control2/Sprite15"]
