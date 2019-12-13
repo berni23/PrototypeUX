@@ -10,9 +10,10 @@ var Char=0
 var Screen = 0
 var message = 'Hey'
 var a=1
+
+
+        
 func _ready():
-	    		
-				
 			for node in get_node('Control').get_children():node.hide()
 			for node in get_node('Control2').get_children():node.hide()
 
@@ -21,19 +22,18 @@ func Unpress(Node):
 	for node in Node.get_children():
 		node.pressed = false
 func _on_buttonBack_pressed():
-	
-	if Screen==0:
-		for node in get_node('Control').get_children():node.hide()	
+	if Screen==0:for node in get_node('Control').get_children():node.hide()	
 	else: 
 		for node in get_node('Control2').get_children():node.hide()
+		$Control/Sprite9.show()
 		Screen=0
 		
-func _on_ButtonBack17_pressed():
-	for node in get_node('Control2').get_children():node.hide()
-	Screen =0
-	$Sprite.show()
-	$Control/Sprite9.show()
-
+#func _on_ButtonBack17_pressed():
+#	for node in get_node('Control2').get_children():node.hide()
+#	Screen =0
+#	$Sprite.show()
+#	$Control/Sprite9.show()
+#
 
 func _on_TouchScreenButton_pressed():
 		$Control.show()
@@ -156,10 +156,8 @@ func _on_Timer8b_timeout():
 func _on_Button9_1_pressed():
 	Screen =1
 	$Control2/Sprite17.show()
-	$Control/Sprite9.hide()
 	$Timer17.start()
 	#for node in get_node('Control').get_children():node.hide()
-	$Sprite.hide()
 func _on_Button9_2_pressed():
 	Screen = 1
 	$Control2/Sprite10.show()
@@ -177,9 +175,7 @@ func _on_Button9_4_pressed():
 	Screen=1
 	$Control2/Sprite21.show()
 func _on_Button21_1_pressed():
-	$Control/Sprite9.hide()
-	$Sprite.hide()
-	$Control2/Sprite21.hide()
+	#$Control2/Sprite21.hide()
 	$Control2/Sprite23.show()
 	$Timer23.start()
 func _on_Button21_2_pressed():
@@ -217,6 +213,7 @@ func _on_Button12A2_pressed():
 	$Control2/Sprite14.show()
 	$Timer14.start()
 func _on_Button12_pressed():
+	$Control2/Sprite12.hide()
 	$Control2/Sprite13.show()
 func _on_Timer14_timeout():
 	$Control2/Sprite15.show()
