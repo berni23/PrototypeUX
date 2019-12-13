@@ -58,7 +58,6 @@ current = true
 
 [node name="Timer8b" type="Timer" parent="."]
 wait_time = 0.08
-one_shot = true
 
 [node name="ButtonBack17" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -182,7 +181,8 @@ flat = true
 [node name="Sprite6" type="Sprite" parent="Control"]
 editor/display_folded = true
 visible = false
-position = Vector2( 426.054, 281.552 )
+position = Vector2( 427.845, 283.498 )
+scale = Vector2( 1, 0.99 )
 texture = ExtResource( 7 )
 
 [node name="Button6" type="Button" parent="Control/Sprite6"]
@@ -212,7 +212,8 @@ flat = true
 editor/display_folded = true
 visible = false
 material = SubResource( 2 )
-position = Vector2( 427.149, 279.465 )
+position = Vector2( 427.149, 287.25 )
+scale = Vector2( 1, 0.98 )
 texture = ExtResource( 9 )
 
 [node name="Button8_1" type="Button" parent="Control/Sprite8"]
@@ -326,14 +327,11 @@ icon = ExtResource( 10 )
 flat = true
 
 [node name="Sprite8b" type="Sprite" parent="Control"]
-editor/display_folded = true
-visible = false
-position = Vector2( 426.532, 280.508 )
-scale = Vector2( 1.9745, 1.84664 )
+position = Vector2( 430.113, 282.454 )
+scale = Vector2( 1.95, 1.84 )
 texture = ExtResource( 11 )
 
 [node name="Label8b" type="Label" parent="Control/Sprite8b"]
-visible = false
 margin_left = -70.073
 margin_top = -54.1456
 margin_right = 356.927
@@ -346,7 +344,6 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Label8b_2" type="Label" parent="Control/Sprite8b"]
-visible = false
 margin_left = -73.2002
 margin_top = -10.7115
 margin_right = 353.8
@@ -360,6 +357,8 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Sprite9" type="Sprite" parent="Control"]
+editor/display_folded = true
+visible = false
 position = Vector2( 428.872, 283.908 )
 scale = Vector2( 1, 0.99 )
 texture = ExtResource( 12 )
@@ -393,6 +392,7 @@ margin_bottom = 180.816
 flat = true
 
 [node name="Control2" type="Control" parent="."]
+visible = false
 margin_left = -168.981
 margin_top = -77.4341
 margin_right = -128.981
@@ -618,7 +618,6 @@ stream = ExtResource( 32 )
 
 [node name="Timer8" type="Timer" parent="."]
 wait_time = 8.0
-one_shot = true
 
 [node name="Timer17" type="Timer" parent="."]
 wait_time = 2.0

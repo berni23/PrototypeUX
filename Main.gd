@@ -194,7 +194,7 @@ func _input(event):
 			else:
 				$Wrong25.play()
 				$Control2/Sprite25/TextEdit.text=''
-		
+				
 	elif $Control2/Sprite22.is_visible():
 		if Input.is_key_pressed(KEY_ENTER):
 			if $Control2/Sprite22/TextEdit.text=='Das Auto':
