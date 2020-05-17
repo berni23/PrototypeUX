@@ -46,15 +46,9 @@ size = 20
 font_data = ExtResource( 27 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 47.947, 0 )
+position = Vector2( -91.8107, 172.145 )
+scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 463.228, 297.07 )
-rotation = -1.5708
-scale = Vector2( 2.04, -2.24 )
-rotating = true
-current = true
 
 [node name="Timer8b" type="Timer" parent="."]
 wait_time = 0.08
@@ -110,7 +104,6 @@ theme = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="Control"]
 editor/display_folded = true
-visible = false
 position = Vector2( 426.665, 294.479 )
 scale = Vector2( 1, 1.01773 )
 texture = ExtResource( 3 )
@@ -124,8 +117,6 @@ rect_scale = Vector2( 6.75131, 2.57713 )
 flat = true
 
 [node name="Sprite3" type="Sprite" parent="Control"]
-editor/display_folded = true
-visible = false
 position = Vector2( 425.382, 295.299 )
 scale = Vector2( 1.00209, 1.04063 )
 texture = ExtResource( 4 )
@@ -150,7 +141,6 @@ flat = true
 
 [node name="Sprite4" type="Sprite" parent="Control"]
 editor/display_folded = true
-visible = false
 position = Vector2( 426.497, 282.359 )
 scale = Vector2( 1.00546, 1 )
 texture = ExtResource( 5 )
@@ -165,9 +155,8 @@ flat = true
 
 [node name="Sprite5" type="Sprite" parent="Control"]
 editor/display_folded = true
-visible = false
-position = Vector2( 428.476, 281.15 )
-scale = Vector2( 1.01351, 0.992602 )
+position = Vector2( 428.476, 294.324 )
+scale = Vector2( 1.01351, 1.03791 )
 texture = ExtResource( 6 )
 
 [node name="Button5" type="Button" parent="Control/Sprite5"]
@@ -180,7 +169,6 @@ flat = true
 
 [node name="Sprite6" type="Sprite" parent="Control"]
 editor/display_folded = true
-visible = false
 position = Vector2( 427.845, 283.498 )
 scale = Vector2( 1, 0.99 )
 texture = ExtResource( 7 )
@@ -195,7 +183,6 @@ flat = true
 
 [node name="Sprite7" type="Sprite" parent="Control"]
 editor/display_folded = true
-visible = false
 position = Vector2( 425.462, 284.481 )
 scale = Vector2( 1.00573, 0.935345 )
 texture = ExtResource( 8 )
@@ -209,10 +196,8 @@ rect_scale = Vector2( -10.1181, 1.08923 )
 flat = true
 
 [node name="Sprite8" type="Sprite" parent="Control"]
-editor/display_folded = true
-visible = false
 material = SubResource( 2 )
-position = Vector2( 427.149, 287.25 )
+position = Vector2( 427.149, 280.794 )
 scale = Vector2( 1, 0.98 )
 texture = ExtResource( 9 )
 
@@ -327,6 +312,7 @@ icon = ExtResource( 10 )
 flat = true
 
 [node name="Sprite8b" type="Sprite" parent="Control"]
+visible = false
 position = Vector2( 430.113, 282.454 )
 scale = Vector2( 1.95, 1.84 )
 texture = ExtResource( 11 )
@@ -357,7 +343,6 @@ autowrap = true
 percent_visible = 0.0
 
 [node name="Sprite9" type="Sprite" parent="Control"]
-editor/display_folded = true
 visible = false
 position = Vector2( 428.872, 283.908 )
 scale = Vector2( 1, 0.99 )
@@ -392,7 +377,7 @@ margin_bottom = 180.816
 flat = true
 
 [node name="Control2" type="Control" parent="."]
-visible = false
+editor/display_folded = true
 margin_left = -168.981
 margin_top = -77.4341
 margin_right = -128.981
@@ -501,7 +486,6 @@ texture = ExtResource( 22 )
 
 [node name="Sprite19" type="Sprite" parent="Control2"]
 editor/display_folded = true
-visible = false
 position = Vector2( 426.021, 262.006 )
 rotation = 0.00501156
 scale = Vector2( 1.004, 1.05 )
@@ -575,9 +559,9 @@ texture = ExtResource( 28 )
 
 [node name="Sprite25" type="Sprite" parent="Control2"]
 editor/display_folded = true
-position = Vector2( 429.903, 267.153 )
+position = Vector2( 426.307, 255.246 )
 rotation = 1.5708
-scale = Vector2( 1, 1.03 )
+scale = Vector2( 1.05405, 1.03 )
 texture = ExtResource( 29 )
 
 [node name="TextEdit" type="TextEdit" parent="Control2/Sprite25"]

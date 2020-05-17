@@ -11,9 +11,8 @@ var Screen = 0
 var message = 'Hey'
 var a=1
 
-
-        
 func _ready():
+	
 			for node in get_node('Control').get_children():node.hide()
 			for node in get_node('Control2').get_children():node.hide()
 
@@ -22,7 +21,10 @@ func Unpress(Node):
 	for node in Node.get_children():
 		node.pressed = false
 func _on_buttonBack_pressed():
-	if Screen==0:for node in get_node('Control').get_children():node.hide()	
+	if Screen==0:
+		for node in get_node('Control').get_children():node.hide()
+		$Sprite/ButtonGerman.show()
+		$Sprite/TouchScreenButton.show()
 	else: 
 		for node in get_node('Control2').get_children():node.hide()
 		$Control/Sprite9.show()
@@ -36,9 +38,13 @@ func _on_buttonBack_pressed():
 #
 
 func _on_TouchScreenButton_pressed():
+		$Sprite/ButtonGerman.hide()
+		$Sprite/TouchScreenButton.hide()
 		$Control.show()
 		get_node("Control/Sprite2").show()	
 func _on_ButtonGerman_pressed():
+	   $Sprite/ButtonGerman.hide()
+	   $Sprite/TouchScreenButton.hide()
 	   $Control/Sprite9.show()
 
 func _on_Button2_pressed():
@@ -48,7 +54,7 @@ func _on_Button3_pressed():
 		get_node("Control/Sprite3").hide()
 		if $Control/Sprite3/HSlider.value==0:
 			get_node("Control/Sprite4").show()
-		else: $Sprite9.show()
+		else: $Control/Sprite9.show()
 func _on_Button4_pressed():
 	get_node("Control/Sprite4").hide()
 	get_node("Control/Sprite5").show()
